@@ -1,0 +1,56 @@
+INPUTS:
+  images [1, 3, 224, 320]
+
+OUTPUTS:
+  output0 [1, 39, 1470]
+  output1 [1, 32, 56, 80]
+
+OPERATOR TYPES (count):
+  Add: 24
+  Concat: 24
+  Conv: 117
+  ConvTranspose: 1
+  Div: 1
+  MatMul: 4
+  MaxPool: 3
+  Mul: 102
+  Reshape: 15
+  Resize: 4
+  Sigmoid: 100
+  Slice: 2
+  Softmax: 2
+  Split: 11
+  Sub: 2
+  Transpose: 4
+
+LAST 30 NODES:
+  Concat          /model.23/Concat  -> ['/model.23/Concat_output_0']
+  Mul             /model.23/cv3.2/cv3.2.1/cv3.2.1.0/act/Mul  -> ['/model.23/cv3.2/cv3.2.1/cv3.2.1.0/act/Mul_output_0']
+  Concat          /model.23/Concat_2  -> ['/model.23/Concat_2_output_0']
+  Conv            /model.23/proto/cv1/conv/Conv  -> ['/model.23/proto/cv1/conv/Conv_output_0']
+  Conv            /model.23/cv3.2/cv3.2.1/cv3.2.1.1/conv/Conv  -> ['/model.23/cv3.2/cv3.2.1/cv3.2.1.1/conv/Conv_output_0']
+  Sigmoid         /model.23/proto/cv1/act/Sigmoid  -> ['/model.23/proto/cv1/act/Sigmoid_output_0']
+  Slice           /model.23/Slice  -> ['/model.23/Slice_output_0']
+  Slice           /model.23/Slice_1  -> ['/model.23/Slice_1_output_0']
+  Sigmoid         /model.23/cv3.2/cv3.2.1/cv3.2.1.1/act/Sigmoid  -> ['/model.23/cv3.2/cv3.2.1/cv3.2.1.1/act/Sigmoid_output_0']
+  Mul             /model.23/proto/cv1/act/Mul  -> ['/model.23/proto/cv1/act/Mul_output_0']
+  Sub             /model.23/Sub  -> ['/model.23/Sub_output_0']
+  Add             /model.23/Add_1  -> ['/model.23/Add_1_output_0']
+  Mul             /model.23/cv3.2/cv3.2.1/cv3.2.1.1/act/Mul  -> ['/model.23/cv3.2/cv3.2.1/cv3.2.1.1/act/Mul_output_0']
+  ConvTranspose   /model.23/proto/upsample/ConvTranspose  -> ['/model.23/proto/upsample/ConvTranspose_output_0']
+  Add             /model.23/Add_2  -> ['/model.23/Add_2_output_0']
+  Sub             /model.23/Sub_1  -> ['/model.23/Sub_1_output_0']
+  Conv            /model.23/cv3.2/cv3.2.2/Conv  -> ['/model.23/cv3.2/cv3.2.2/Conv_output_0']
+  Conv            /model.23/proto/cv2/conv/Conv  -> ['/model.23/proto/cv2/conv/Conv_output_0']
+  Div             /model.23/Div_1  -> ['/model.23/Div_1_output_0']
+  Reshape         /model.23/Reshape_5  -> ['/model.23/Reshape_5_output_0']
+  Sigmoid         /model.23/proto/cv2/act/Sigmoid  -> ['/model.23/proto/cv2/act/Sigmoid_output_0']
+  Concat          /model.23/Concat_3  -> ['/model.23/Concat_3_output_0']
+  Concat          /model.23/Concat_1  -> ['/model.23/Concat_1_output_0']
+  Mul             /model.23/proto/cv2/act/Mul  -> ['/model.23/proto/cv2/act/Mul_output_0']
+  Mul             /model.23/Mul_2  -> ['/model.23/Mul_2_output_0']
+  Sigmoid         /model.23/Sigmoid  -> ['/model.23/Sigmoid_output_0']
+  Conv            /model.23/proto/cv3/conv/Conv  -> ['/model.23/proto/cv3/conv/Conv_output_0']
+  Sigmoid         /model.23/proto/cv3/act/Sigmoid  -> ['/model.23/proto/cv3/act/Sigmoid_output_0']
+  Concat          /model.23/Concat_4  -> ['output0']
+  Mul             /model.23/proto/cv3/act/Mul  -> ['output1']

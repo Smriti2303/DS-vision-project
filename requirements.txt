@@ -1,0 +1,8 @@
+# Core detection engine — includes YOLOv8, YOLO-World, and YOLOE all in one package
+ultralytics>=8.4.0
+
+# Lets Python read/display images and video frames (webcam + RTSP)
+opencv-python>=4.9.0
+
+# Powers the prompt-box dashboard in step 4 (skip this if you only need steps 1-3)
+streamlit>=1.35.0

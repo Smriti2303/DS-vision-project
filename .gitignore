@@ -1,0 +1,36 @@
+# Python environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# VS Code
+.vscode/
+
+# Generated outputs
+runs/
+
+# NPU generated/work files
+npu_work/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large model weights
+backend_api/weights/clip/
+weights/clip/
+
+# Large MobileCLIP artifacts
+backend_api/mobileclip2_b.ts
+backend_api/mobileclip_blt.ts
